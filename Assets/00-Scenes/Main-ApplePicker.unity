@@ -322,6 +322,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -7678273598938054336, guid: 439d2be6f1e38a84d974b6e6afc2a4fb, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 6367485890823309508, guid: e44c9b3fa5d2a794db13b19ccbaa8e8c, type: 3}
+    - target: {fileID: -7678273598938054336, guid: 439d2be6f1e38a84d974b6e6afc2a4fb, type: 3}
       propertyPath: leftAndRightEdge
       value: 25
       objectReference: {fileID: 0}
@@ -368,6 +372,10 @@ PrefabInstance:
     - target: {fileID: 5090399924614405555, guid: 439d2be6f1e38a84d974b6e6afc2a4fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498801262777463899, guid: 439d2be6f1e38a84d974b6e6afc2a4fb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8464819744632288497, guid: 439d2be6f1e38a84d974b6e6afc2a4fb, type: 3}
       propertyPath: m_Name
