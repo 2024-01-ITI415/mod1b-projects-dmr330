@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 611057148}
   - component: {fileID: 611057150}
   - component: {fileID: 611057149}
+  - component: {fileID: 611057151}
   m_Layer: 5
   m_Name: HighScore
   m_TagString: Untagged
@@ -257,6 +258,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611057147}
   m_CullTransparentMesh: 1
+--- !u!114 &611057151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611057147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c689e777237b3c4688f01eef8853d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &752166659
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +447,7 @@ MonoBehaviour:
   numBaskets: 3
   basketBottomY: -14
   basketSpacingY: 2
+  basketList: []
 --- !u!1 &966930302
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +562,7 @@ GameObject:
   - component: {fileID: 1332836680}
   - component: {fileID: 1332836682}
   - component: {fileID: 1332836681}
+  - component: {fileID: 1332836683}
   m_Layer: 5
   m_Name: ScoreCounter
   m_TagString: Untagged
@@ -671,6 +686,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332836679}
   m_CullTransparentMesh: 1
+--- !u!114 &1332836683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332836679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c4f70e429e6344eacab25e76fe3b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreGT: {fileID: 0}
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0
