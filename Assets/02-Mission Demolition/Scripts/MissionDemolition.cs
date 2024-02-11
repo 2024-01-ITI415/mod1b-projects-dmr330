@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public enum GameMode
 {
@@ -52,7 +51,7 @@ public class MissionDemolition : MonoBehaviour
         castle.transform.position = castlePos;
         shotsTaken = 0;
 
-        SwitchView("wShow Both");
+        SwitchView("Show Both");
         ProjectileLine.S.Clear();
 
         Goal.goalMet = false;
