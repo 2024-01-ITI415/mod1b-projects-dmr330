@@ -49,6 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -3
+  leftEdge: -16
+  pipeSpawnX: 16
+  pipeMinY: -6
+  pipeMaxY: 2.5
 --- !u!1 &2238376841052156729
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,6 @@ public class FlappySphere : MonoBehaviour
 
     void SpawnPipe()
     {
-        //Create a pipe prefab every several seconds
         GameObject pipe = Instantiate<GameObject>(pipePrefab);
         Invoke("SpawnPipe", secondsBetweenPipes);
     }
