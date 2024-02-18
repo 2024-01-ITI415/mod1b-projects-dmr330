@@ -6,8 +6,8 @@ public class NewBehaviourScript : MonoBehaviour
 {
     [Header("Set in Inspector")]
     public Rigidbody rb;
-    public float gravityScale = 1.0f;
-    public float globalGravity = -10.0f;
+    //Variables that let me adjust gravity and jump
+    public float sphereGravity = -10.0f;
     public float jumpAmount = 10;
 
     void OnEnable()
@@ -25,7 +25,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector3 gravity = globalGravity * gravityScale * Vector3.up;
+        Vector3 gravity = sphereGravity * Vector3.up;
         rb.AddForce(gravity, ForceMode.Acceleration);
     }
 }
