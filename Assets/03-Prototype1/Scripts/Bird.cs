@@ -10,6 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float sphereGravity = -10.0f;
     public float jumpAmount = 10;
 
+    //Turning off Unity's built-in gravity
     void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,6 +19,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void Update()
     {
+        //If the user presses space, add a force upwards
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
@@ -25,6 +27,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void FixedUpdate()
     {
+        //Apply custom gravity to the sphere
         Vector3 gravity = sphereGravity * Vector3.up;
         rb.AddForce(gravity, ForceMode.Acceleration);
     }

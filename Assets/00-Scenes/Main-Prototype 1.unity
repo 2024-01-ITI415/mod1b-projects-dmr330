@@ -228,7 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df9e1cc0979df749a11606e78bd3899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereGravity: -10
+  pipePrefab: {fileID: 175799724868519654, guid: 36994930090bfa149974a99964edd260, type: 3}
+  secondsBetweenPipes: 3
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0

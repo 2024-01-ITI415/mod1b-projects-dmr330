@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class FlappySphere : MonoBehaviour
 {
-    public float sphereGravity = -10.0f;
-    // Start is called before the first frame update
+    [Header("Set in Inspector")]
+
+    //Prefab for instantiating pipes
+    public GameObject pipePrefab;
+
+    //Rate at which the pipes will be instantiated
+    public float secondsBetweenPipes = 3f;
+
     void Start()
     {
-        if(!(Input.GetKeyDown(KeyCode.Space)))
-        {
-            sphereGravity = 0;
-        }
+        //Spawning pipes after a delay
+        Invoke("SpawnPipe", 3f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawnPipe()
     {
-        
+        //Create a pipe prefab every several seconds
+        GameObject pipe = Instantiate<GameObject>(pipePrefab);
+        Invoke("SpawnPipe", secondsBetweenPipes);
     }
 }
