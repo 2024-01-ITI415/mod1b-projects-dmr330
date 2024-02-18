@@ -7,6 +7,8 @@ TagManager:
   - Apple
   - Projectile
   - Pipe
+  - Bird
+  - KillBox
   layers:
   - Default
   - TransparentFX

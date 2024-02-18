@@ -23,4 +23,8 @@ public class FlappySphere : MonoBehaviour
         GameObject pipe = Instantiate<GameObject>(pipePrefab);
         Invoke("SpawnPipe", secondsBetweenPipes);
     }
+
+    public void PipesDestroyed()
+    {
+    }
 }

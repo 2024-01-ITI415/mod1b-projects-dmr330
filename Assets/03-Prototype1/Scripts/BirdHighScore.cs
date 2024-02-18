@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-public class HighScore : MonoBehaviour
+public class BirdHighScore : MonoBehaviour
 {
     static public int score = 1000;
     private TextMeshProUGUI text;
@@ -23,7 +23,7 @@ public class HighScore : MonoBehaviour
         text.SetText("High Score: " + score);
         // Update the PlayerPrefs HighScore if necessary
         if (score > PlayerPrefs.GetInt("HighScore"))
-        { // d
+        {
             PlayerPrefs.SetInt("HighScore", score);
         }
     }

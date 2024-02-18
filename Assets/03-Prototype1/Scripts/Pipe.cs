@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using static UnityEditor.PlayerSettings;
 
 public class Pipe : MonoBehaviour
@@ -8,7 +10,7 @@ public class Pipe : MonoBehaviour
     [Header("Set in Inspector")]
 
     //Speed of moving left
-    public float speed = -1.0f;
+    public float speed = -1f;
 
     //Left edge of screen
     public float leftEdge = -10f;
@@ -23,7 +25,7 @@ public class Pipe : MonoBehaviour
     void Start()
     {
         //Override the pipe's loaction to a random value
-        Vector3 randY = new Vector3(pipeSpawnX, Random.Range(pipeMinY, pipeMaxY), 0);
+        Vector3 randY = new Vector3(pipeSpawnX, Random.Range(pipeMinY, pipeMaxY), 1);
         this.gameObject.transform.position = randY;
     }
     // Update is called once per frame
