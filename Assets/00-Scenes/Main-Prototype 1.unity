@@ -456,6 +456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1797835247}
+  gravityScale: 1
+  globalGravity: -15
   jumpAmount: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
