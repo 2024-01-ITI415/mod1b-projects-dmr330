@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BirdHighScore : MonoBehaviour
 {
-   static public int birdScore = 10;
+    static public int birdScore = 10;
 
     void Awake()
     {
