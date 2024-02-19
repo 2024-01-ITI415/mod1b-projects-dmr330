@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
-using static UnityEditor.PlayerSettings;
 
 public class Pipe : MonoBehaviour
 {

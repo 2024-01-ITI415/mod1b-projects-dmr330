@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
-using static UnityEditor.PlayerSettings;
 
 public class NewBehaviourScript : MonoBehaviour
 {
