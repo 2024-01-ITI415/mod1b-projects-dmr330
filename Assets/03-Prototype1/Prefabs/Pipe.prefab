@@ -49,11 +49,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61274635a1f02344bc410e5cef3049d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -3
+  speed: -8
   leftEdge: -16
   pipeSpawnX: 16
   pipeMinY: -6
-  pipeMaxY: 2.5
+  pipeMaxY: 2
 --- !u!1 &799070931944647077
 GameObject:
   m_ObjectHideFlags: 0

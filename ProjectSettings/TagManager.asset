@@ -9,6 +9,7 @@ TagManager:
   - Pipe
   - Bird
   - KillBox
+  - ScoreTrigger
   layers:
   - Default
   - TransparentFX

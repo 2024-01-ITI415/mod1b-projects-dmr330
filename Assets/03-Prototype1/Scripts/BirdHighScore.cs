@@ -1,30 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
+
 public class BirdHighScore : MonoBehaviour
 {
-    static public int score = 1000;
-    private TextMeshProUGUI text;
+   static public int birdScore = 10;
+
     void Awake()
     {
-        text = GetComponent<TextMeshProUGUI>();
-        // If the PlayerPrefs HighScore already exists, read it
-        if (PlayerPrefs.HasKey("HighScore"))
+        //If the PlayerPrefs BirdHighScore already exists, read it
+        if (PlayerPrefs.HasKey("BirdHighScore"))
         {
-            score = PlayerPrefs.GetInt("HighScore");
+            birdScore = PlayerPrefs.GetInt("BirdHighScore");
         }
-        // Assign the high score to HighScore
-        PlayerPrefs.SetInt("HighScore", score);
+        //Assign the high score to BirdHighScore
+        PlayerPrefs.SetInt("BirdHighScore", birdScore);
     }
+
     void Update()
     {
-        //Text gt = this.GetComponent<Text>();
-        text.SetText("High Score: " + score);
-        // Update the PlayerPrefs HighScore if necessary
-        if (score > PlayerPrefs.GetInt("HighScore"))
+        Text brdgt = this.GetComponent<Text>();
+        brdgt.text = "High Score: " + birdScore;
+        //Update the PlayerPrefs HighScore if necessary
+        if (birdScore > PlayerPrefs.GetInt("BirdHighScore"))
         {
-            PlayerPrefs.SetInt("HighScore", score);
+            PlayerPrefs.SetInt("BirdHighScore", birdScore);
         }
     }
 }

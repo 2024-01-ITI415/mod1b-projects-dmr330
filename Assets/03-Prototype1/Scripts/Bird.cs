@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using static UnityEditor.PlayerSettings;
@@ -10,11 +10,9 @@ public class NewBehaviourScript : MonoBehaviour
 {
     [Header("Set in Inspector")]
 
-    public TextMeshProUGUI scoreGT;
+    public Text birdScoreGT;
 
     public Rigidbody rb;
-
-
 
     //Variables that let me adjust gravity and jump
     public float sphereGravity = -10.0f;
@@ -26,16 +24,15 @@ public class NewBehaviourScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
 
-
-        // Find a reference to the ScoreCounter GameObject
-        GameObject scoreGO = GameObject.Find("ScoreCounter");
-        // Get the Text Component of that GameObject
-        scoreGT = scoreGO.GetComponent<TextMeshProUGUI>();
-        // Set the starting number of points to 0
-        scoreGT.text = "0";
+        //Find a reference to the Bird ScoreCounter GameObject
+        GameObject birdScoreGO = GameObject.Find("BirdScoreCounter");
+        //Get the Texxt Component of that GameObject
+        birdScoreGT = birdScoreGO.GetComponent<Text>();
+        //Set the starting number of points to 0
+        birdScoreGT.text = "0";
     }
 
-    private void Update()
+    void Update()
     {
         //If the user presses space, add a force upwards
         if (Input.GetKeyDown(KeyCode.Space))
@@ -64,15 +61,23 @@ public class NewBehaviourScript : MonoBehaviour
             SceneManager.LoadScene("Main-FlappyBird");
         }
 
+        //Add a point when the bird passes a score trigger
         if (collidedWith.tag == "ScoreTrigger")
         {
             Destroy(collidedWith);
-            // Parse the text of the scoreGT into an int
-            int score = int.Parse(scoreGT.text);
-            // Add points for catching the apple
-            score += 1;
-            // Convert the score back to a string and display it
-            scoreGT.text = score.ToString();
+            //Parse the text of the birdScoreGT into an int
+            int birdScore = int.Parse(birdScoreGT.text);
+            //Add points for passing a pipe
+            birdScore += 1;
+            //Convert the score back to a string and display it
+            birdScoreGT.text = birdScore.ToString();
+
+            //Track the high score
+            if (birdScore > BirdHighScore.birdScore)
+            {
+                BirdHighScore.birdScore = birdScore;
+            }
+
         }
     }
 }
